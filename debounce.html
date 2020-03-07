@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>点击我，5秒</h1>
+    <script>
+      (function() {
+        const dur = 5000;
+        let oldTime;
+        document.body.addEventListener(
+          "click",
+          function() {
+            if (!oldTime) {
+              oldTime = new Date();
+              return;
+            }
+            if (Date.now() - oldTime < dur) {
+              oldTime = new Date();
+              return;
+            }
+            // ...正常逻辑处理
+            console.log("正常逻辑处理");
+            oldTime = null;
+          },
+          false
+        );
+      })();
+    </script>
+    <script>
+      alert("XSS来了！");
+    </script>
+  </body>
+</html>
