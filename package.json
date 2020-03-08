@@ -1,0 +1,22 @@
+{
+  "name": "fe-engineering",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bind.js",
+  "scripts": {
+    "ts": "tsc vnode.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qidaneix/fe-engineering.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qidaneix/fe-engineering/issues"
+  },
+  "homepage": "https://github.com/qidaneix/fe-engineering#readme",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
